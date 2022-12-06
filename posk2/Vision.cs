@@ -109,10 +109,6 @@ namespace posk2
                 indicator.BackColor = Color.Red;
                 Stopwatch.Restart();
             }
-            if (counter == 5)
-            {
-                timer.Stop();
-            }
         }
     }
 }

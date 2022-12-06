@@ -32,9 +32,9 @@ namespace posk2
 
         private void clear_Results()
         {
-            results.Clear();
-            resultTable.Text = "";
-            resultChart.Series[0].Points.Clear();
+            results.Clear();                                    //Funkcja czyszcząca listę wyników
+            resultTable.Text = "";                              //Nadpisz wyświetlane wyniki pustym znakiem
+            resultChart.Series[0].Points.Clear();               //Funkcja szyszcząca graf
         }
 
         private void btnCheck_Click(object sender, EventArgs e)
@@ -100,12 +100,8 @@ namespace posk2
             if(!Stopwatch.IsRunning || counter == 0)
             {
                 counter++;
-                Console.Beep();
+                Console.Beep(2500, 500);
                 Stopwatch.Restart();
-            }
-            if(counter == 5)
-            {
-                timer.Stop();
             }
         }
     }
